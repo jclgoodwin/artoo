@@ -88,13 +88,13 @@ $(document).ready(function () {
         ];
 
     for (var i = 0; i < examples.length; i += 1) {
-        $("#applicationMenu").append("<li class=menuLi id=loadExample" + i + ">Load <code>" + examples[i] + "</code></li>");
+        $("#applicationMenu").append("<li class=menuLi id=loadExample" + i + ">" + examples[i] + "</li>");
         $("#loadExample" + i).click(function() {
             graph.clear();
     
             $.ajax({
                 type: "GET",
-                url: "examples/" + examples[i],
+                url: "examples/" + $(this).text(),
                 dataType: "xml",
                 success: function(xml) {
                     processXMLFile(xml);
