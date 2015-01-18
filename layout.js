@@ -1,6 +1,9 @@
 var layout = [];
 
 layout.doLayout = function(svgGraph) {
+
+    // 
+
     var springyGraph = new Springy.Graph();
     var springyNodes = [];
 
@@ -76,19 +79,29 @@ $(document).ready(function () {
     // disable annoying (to me) "unsaved changes will be lost" dialog
     // $(window).off("onbeforeunload");
 
-    $("#applicationMenu").append("<li class=menuLi id=loadExample>Load <code>example2.xml</code></li>");
-    $("#loadExample").click(function() {
-        graph.clear();
+    var examples = [
+        '1-kieran-thesis.xml',
+        '2-kieran-thesis.xml',
+        '3-kieran-thesis.xml',
+        '4-kieran-thesis.xml',
+        'example2.xml'
+        ]
 
-        $.ajax({
-            type: "GET",
-            url: "examples/example2.xml",
-            dataType: "xml",
-            success: function(xml) {
-                processXMLFile(xml);
-            }
+    for (var i = 0; i < examples.length; i += 1) {
+        $("#applicationMenu").append("<li class=menuLi id=loadExample" + i + ">Load <code>" + examples[i] + "</code></li>");
+        $("#loadExample" + i).click(function() {
+            graph.clear();
+    
+            $.ajax({
+                type: "GET",
+                url: "examples/" + examples[i],
+                dataType: "xml",
+                success: function(xml) {
+                    processXMLFile(xml);
+                }
+            });
         });
-    });
+    }
 
     $("#applicationMenu").append("<li class=menuLi>Lay out</li>");
 
