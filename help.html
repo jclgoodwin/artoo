@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Help: Argumentation Tool</title>
+	<link rel="stylesheet" type="text/css" href="help.css" media="all" />
+</head>
+<body>
+<div id="sideDiv"></div> 
+<div id="mainDiv">
+<div id="textDiv">
+<h1>Argumentation Tool Help</h1>
+
+<h2>Overview</h2>
+
+<p>This tool enables you to build and manipulate a graphical structure consisting of text-containing nodes and arrows that represents a logical argument. Specifically, it uses the syntax of the <a href="http://www.goalstructuringnotation.info/" target="_blank">Goal Structuring Notation</a>, which provides the following types of node: Goal (rectangular node), Strategy (parallelogram), Solution (circle), Context (rounded rectangle), Assumption (ellipse) and Justification (ellipse). Structures can be saved to file and exported as PNG images.</p>
+
+<h2>Building an Argument Structure</h2>
+
+<p> Argument structures are built by creating, editing and deleting nodes, and creating and deleting connections between nodes. These functionalities are accessed either from the <strong>Build</strong> menu or by right clicking an existing node with the mouse. Selecting one of these functionalities displays a popup, described below.</p>
+
+<h3>Create Node</h3>
+
+<p>Here you can select the <strong>Type</strong> of the node: Goal (rectangular node), Strategy (parallelogram), Solution (circle), Context (rounded rectangle), Assumption (ellipse) and Justification (ellipse). The text to be displayed in the node is provided by the <strong>Title</strong> and the <strong>Content</strong>. The <strong>Content</strong> allows you to add simple formatting: bold, italic, and text colour, and to embed a link via a standard web URL.</p>
+
+<h3>Edit Node</h3>
+
+<p>If accessing from the <strong>Build</strong> menu, you can select the node you wish to edit from a drop-down list of node titles. The edit dialog allows you to edit the <strong>Title</strong> and <strong>Content</strong> of the node.</p>
+
+<h3>Delete Node</h3>
+
+<p>If accessing from the <strong>Build</strong> menu, you can select the node you wish to delete from a drop-down list of node titles. The node will be removed from the argument structure along with any connections to or from the deleted node.</p>
+
+<h3>Create Connection</h3>
+
+<p>Creates an arrow from a parent node to a child node. The type of arrowhead (filled or unfilled) is chosen automatically. If accessing from the <strong>Build</strong> menu, you can select the parent and child ends of the arrow from drop-down boxes. If accessing from right clicking the node, you can choose whether the node is the parent or child end of the connection and select the other from a drop-down box.</p>
+
+<h3>Delete Connection</h3>
+
+<p>Removes from the structure the connection chosen from a drop-down box.</p>
+
+<h2>Manipulating an Argument Structure</h2>
+
+The <strong>View</strong> menu provides the ability to zoom in and out, and to centre the structure in the window.</p>
+
+<p>Nodes in the argument structure can be individually moved using the computer mouse by left clicking and dragging the node. Left mouse clicking and dragging on areas outside of the nodes will drag the entire structure.</p>
+
+<p>Additionally the following functionality can be accessed by right-clicking a node with the mouse:
+</p>
+
+<ul>
+<li> <strong>Collapse</strong>: any node which is a parent node (there is a connection from that node to another) can be collapsed to hide all the nodes below it in the structure. If collapsed, a node will display a filled diamond in place of the collapsed structure.</li>
+<li> <strong>Expand</strong>: any node which has been collapsed (displays a filled diamond) will display the <strong>Expand</strong> item instead of <strong>Collapse</strong>. Expanding the node will reveal the collapsed structure.</li>
+<li> <strong>Mark Undeveloped</strong>: right-clicking on a Goal node which has no child connections allows access to this option. If marked undeveloped, a goal node will have an unfilled diamond placed where a child connection would be. This is part of the Goal Structuring Syntax.</li>
+</ul>
+
+<h2>Load, Save and Export</h2>
+
+<p>The <strong>File</strong> menu enables you to open and save a file that describes the argument structure, or to export the structure as a PNG image. The menu items under the <strong>File</strong> menu have the following functionality:</p>
+
+<ul>
+<li> <strong>Open File</strong>: will open a previously saved structure from a location on your local machine.</li>
+<li> <strong>Save File</strong>: will save your structure to a file on your local machine. The saved file is in the XML format.</li>
+<li> <strong>Export as PNG</strong>: will save a PNG image representation of your structure to a file on your local machine.</li>
+</ul>
+
+</div>
+</div>
+<div id="sideDiv"></div> 
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <node id="0" nodetype="goal" x="529" y="225" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.1:</name>
+    <description><![CDATA[<p>Underlying biological data</p><p>is adequate/accurate</p>]]></description>
+  </node>
+  <node id="1" nodetype="strategy" x="118" y="33" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.1.1:</name>
+    <description><![CDATA[<p>Argue that number and attributes of</p><p>hematopoetic cells is representative</p><p>ov biological system</p>]]></description>
+  </node>
+  <node id="2" nodetype="goal" x="-93" y="-186" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.1.1.1:</name>
+    <description><![CDATA[<p>Number of cells is</p><p>representative of&nbsp;the</p><p>number oberved biologically</p>]]></description>
+  </node>
+  <node id="3" nodetype="solution" x="-237" y="-433" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Flow cytometry</p><p>results&nbsp;from E15.5:</p><p>0.45% of&nbsp;cells LTin</p>]]></description>
+  </node>
+  <node id="4" nodetype="solution" x="-40" y="-440" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Flow cytometry</p><p>results from E15.5:</p><p>0.37% of cells LTi</p>]]></description>
+  </node>
+  <node id="5" nodetype="assumption" x="-636" y="-281" collapsed="false" undeveloped="false">
+    <name>Assumptions:</name>
+    <description><![CDATA[<p>1. The percentage of cells established through&nbsp;</p><p>flow&nbsp;cytometry&nbsp;is used as the percentage of&nbsp;gut&nbsp;</p><p>area&nbsp;occupied by cells at E15.5, thus&nbsp;giving an&nbsp;</p><p>estimate&nbsp;of&nbsp;cell number</p><p>2. This cell number is used in the calculation&nbsp;</p><p>of&nbsp;a linear input rate, that inputs the required&nbsp;</p><p>number&nbsp;of cells per time-step such that the</p><p>required number&nbsp;is reached at the time-point&nbsp;</p><p>representing E15.5</p><p>3. As no further flow cytometry data is available,</p><p>this&nbsp;input rate continues through to the end of&nbsp;</p><p>the simulation</p>]]></description>
+  </node>
+  <node id="6" nodetype="goal" x="171" y="-173" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.1.1.2:</name>
+    <description><![CDATA[<p>Cell size and speeds</p><p>are biologically verified</p>]]></description>
+  </node>
+  <node id="7" nodetype="justification" x="549" y="-310" collapsed="false" undeveloped="false">
+    <name>Justification:</name>
+    <description><![CDATA[<p>Velocities of cells away from a forming</p><p>patch&nbsp;examined, revealing these are&nbsp;</p><p>normally&nbsp;distributed (Figure 2.3).&nbsp;With</p><p>this assured,&nbsp;simulated cells are</p><p>assigned&nbsp;a speed using&nbsp;a random&nbsp;</p><p>guassian number generator</p><p></p>]]></description>
+  </node>
+  <node id="8" nodetype="context" x="516" y="-69" collapsed="false" undeveloped="false">
+    <name>Context:</name>
+    <description><![CDATA[<p>Scale set where 1 pixel = 4 microns</p>]]></description>
+  </node>
+  <node id="9" nodetype="solution" x="155" y="-445" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Cell speed ranges</p><p>(3.8 &ndash; 8.8&mu;m) from</p><p>Patel et al (2012)</p>]]></description>
+  </node>
+  <node id="10" nodetype="solution" x="355" y="-456" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Cell size</p><p>(8&mu;m) from&nbsp;</p><p>Veiga-Fernandes</p><p>(2007)</p>]]></description>
+  </node>
+  <node id="11" nodetype="context" x="-205" y="204" collapsed="false" undeveloped="false">
+    <name>Context:</name>
+    <description><![CDATA[<p>This goal purely examines the biological</p><p>information included in the domain model,</p><p>and is not a justification of abstractions.</p><p>This is argued in Goal 1.1.2</p>]]></description>
+  </node>
+  <node id="12" nodetype="strategy" x="110" y="450" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.1.2:</name>
+    <description><![CDATA[<p>Argue that number and attribues</p><p>of stromal&nbsp;cells is representative</p><p>of biological system</p>]]></description>
+  </node>
+  <node id="13" nodetype="goal" x="-48" y="634" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.1.2.1:</name>
+    <description><![CDATA[<p>Number of cells is representative of</p><p>the number observed biologically</p>]]></description>
+  </node>
+  <node id="14" nodetype="solution" x="18" y="844" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Flow cytometry</p><p>results from E15.5:</p><p>20% of cells LTi</p>]]></description>
+  </node>
+  <node id="15" nodetype="assumption" x="-618" y="570" collapsed="false" undeveloped="false">
+    <name>Assumptions:</name>
+    <description><![CDATA[<p>1. The percentage of cells esablished through</p><p>flow cytometry is used as the percentage of gut</p><p>area occupied by the cells at E15.5, thus giving</p><p>an estimate of cell number</p><p>2. Only a percentage of these have the</p><p>capability to differentiate and become Peyer's</p><p>Patches. This percentage has been set</p><p>through&nbsp;calibration</p>]]></description>
+  </node>
+  <node id="16" nodetype="goal" x="304" y="638" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.1.2.2:</name>
+    <description><![CDATA[<p>Cell size is&nbsp;</p><p>biologically verified</p>]]></description>
+  </node>
+  <node id="17" nodetype="context" x="548" y="648" collapsed="false" undeveloped="false">
+    <name>Context:</name>
+    <description><![CDATA[<p>Scale set where 1 pixel = 4 microns</p>]]></description>
+  </node>
+  <node id="18" nodetype="solution" x="314" y="845" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Cell size</p><p>(24&mu;m) from</p><p>Veiga-Fernandes</p><p>(2007)</p>]]></description>
+  </node>
+  <node id="19" nodetype="strategy" x="917" y="13" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.1.3:</name>
+    <description><![CDATA[<p>Argue that the spatial</p><p>measurements have been</p><p>captured correctly</p>]]></description>
+  </node>
+  <node id="20" nodetype="goal" x="982" y="-225" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.1.3.1:</name>
+    <description><![CDATA[<p>Measurements of simulated</p><p>gut environment con be related</p><p>to biological measurements</p>]]></description>
+  </node>
+  <node id="21" nodetype="context" x="1350" y="-85" collapsed="false" undeveloped="false">
+    <name>Context:</name>
+    <description><![CDATA[<p>Scale set where 1 pixel = 4 microns</p>]]></description>
+  </node>
+  <node id="22" nodetype="assumption" x="1370" y="-323" collapsed="false" undeveloped="false">
+    <name>Assumptions:</name>
+    <description><![CDATA[<p>1. The gut environment is also</p><p>developing&nbsp;during PP formation.</p><p>Taking measure at &nbsp;E15.5 and</p><p>E16.5 ensures a rate of growth</p><p>can be calculated and used in</p><p>the simulation</p>]]></description>
+  </node>
+  <node id="23" nodetype="solution" x="965" y="-465" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Stereomicroscopy</p><p>measurements</p><p>taken&nbsp;at E15.5</p><p>(Figure 2.10)</p>]]></description>
+  </node>
+  <node id="24" nodetype="solution" x="1196" y="-475" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Stereomicroscopy</p><p>measurements</p><p>taken at E16.5</p><p>(Figure 2.10)</p>]]></description>
+  </node>
+  <node id="25" nodetype="strategy" x="914" y="419" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.1.4:</name>
+    <description><![CDATA[<p>Argue that the data available</p><p>to judge&nbsp;aggregation formation</p><p>is fit for purpose</p>]]></description>
+  </node>
+  <node id="26" nodetype="goal" x="907" y="633" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.1.4.1:</name>
+    <description><![CDATA[<p>Suitable data available to</p><p>quantify number of aggregations</p><p>that form in the mouse gut</p>]]></description>
+  </node>
+  <node id="27" nodetype="solution" x="983" y="829" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Observations</p><p>taken from 6</p><p>adult mice</p><p>(Figure 1.2)</p>]]></description>
+  </node>
+  <node id="28" nodetype="goal" x="1233" y="639" collapsed="false" undeveloped="true">
+    <name>CLAIM 1.1.1.4.2</name>
+    <description><![CDATA[<p>Suitable data available to</p><p>contrast simulation aggregation</p><p>to size that is observed <em>in vivo</em></p>]]></description>
+  </node>
+  <connection parentid="0" childid="1"/>
+  <connection parentid="1" childid="2"/>
+  <connection parentid="2" childid="3"/>
+  <connection parentid="2" childid="4"/>
+  <connection parentid="2" childid="5"/>
+  <connection parentid="1" childid="6"/>
+  <connection parentid="6" childid="7"/>
+  <connection parentid="6" childid="8"/>
+  <connection parentid="6" childid="9"/>
+  <connection parentid="6" childid="10"/>
+  <connection parentid="0" childid="11"/>
+  <connection parentid="0" childid="12"/>
+  <connection parentid="12" childid="13"/>
+  <connection parentid="13" childid="14"/>
+  <connection parentid="13" childid="15"/>
+  <connection parentid="12" childid="16"/>
+  <connection parentid="16" childid="17"/>
+  <connection parentid="16" childid="18"/>
+  <connection parentid="0" childid="19"/>
+  <connection parentid="19" childid="20"/>
+  <connection parentid="20" childid="22"/>
+  <connection parentid="20" childid="21"/>
+  <connection parentid="20" childid="23"/>
+  <connection parentid="20" childid="24"/>
+  <connection parentid="0" childid="25"/>
+  <connection parentid="25" childid="26"/>
+  <connection parentid="26" childid="27"/>
+  <connection parentid="25" childid="28"/>
+</argument>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <node id="0" nodetype="goal" x="487" y="-41" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.2:</name>
+    <description><![CDATA[<p>The abstraction (platform model)</p><p>is adequate representation</p>]]></description>
+  </node>
+  <node id="1" nodetype="strategy" x="152" y="-255" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.2.1:</name>
+    <description><![CDATA[<p>Argue that chemokine</p><p>expression&nbsp;is adequately</p><p>captured in the simulation</p>]]></description>
+  </node>
+  <node id="2" nodetype="goal" x="8" y="-460" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.2.1.1:</name>
+    <description><![CDATA[<p>Capturing one chemokine</p><p>is&nbsp;sufficient to capture</p><p>emergent behaviour</p>]]></description>
+  </node>
+  <node id="3" nodetype="goal" x="257" y="-460" collapsed="false" undeveloped="true">
+    <name>CLAIM 1.1.2.1.2:</name>
+    <description><![CDATA[<p>Levels of expression of</p><p>chemokines replicates that</p><p>in the biological system</p>]]></description>
+  </node>
+  <node id="4" nodetype="context" x="559" y="-531" collapsed="false" undeveloped="false">
+    <name>Context:</name>
+    <description><![CDATA[<p>No quantitative data</p><p>exists&nbsp;at the current time</p>]]></description>
+  </node>
+  <node id="5" nodetype="justification" x="-517" y="-513" collapsed="false" undeveloped="false">
+    <name>Justifications:</name>
+    <description><![CDATA[<p>1. LTi cells express two chemokine&nbsp;</p><p>receptors, CXCR5 and CCR7 &ndash; the&nbsp;first</p><p>binds chemokine CXCL13, the&nbsp;second</p><p>CCL19 and CCL21&nbsp;(Luther 2003, Ohl 2003)</p><p>2. Inhibiting CXCR5 significantly impacts</p><p>lymphoid organ development, whereas no</p><p>significant difference is observed when&nbsp;</p><p>inhibiting CCR7</p>]]></description>
+  </node>
+  <node id="6" nodetype="solution" x="-204" y="-733" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Significant difference</p><p>in PP formation if</p><p>CXCR5 inhibited</p><p>(Ansel 2000)</p>]]></description>
+  </node>
+  <node id="7" nodetype="solution" x="30" y="-730" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>No significant</p><p>difference in mice</p><p>lacking receptor</p><p>CCR7 (Luther 2003)</p>]]></description>
+  </node>
+  <node id="8" nodetype="solution" x="291" y="-693" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Domain</p><p>Expert&nbsp;insight</p>]]></description>
+  </node>
+  <node id="9" nodetype="strategy" x="875" y="-256" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.2.2:</name>
+    <description><![CDATA[<p>Argue that adhesion factor</p><p>expression is adequately</p><p>captured in the simulation</p>]]></description>
+  </node>
+  <node id="10" nodetype="goal" x="1074" y="-462" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.2.2.1:</name>
+    <description><![CDATA[<p>Capturing one adhesion</p><p>factor&nbsp;is sufficient to capture&nbsp;</p><p>emergent behaviour</p>]]></description>
+  </node>
+  <node id="11" nodetype="solution" x="1000" y="-714" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Significant difference</p><p>in PP formation if</p><p>VCAM-1 inhibited</p><p>(Finke 2002)</p>]]></description>
+  </node>
+  <node id="12" nodetype="solution" x="1263" y="-693" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Domain</p><p>Expert insight</p>]]></description>
+  </node>
+  <node id="13" nodetype="justification" x="1462" y="-504" collapsed="false" undeveloped="false">
+    <name>Justifications:</name>
+    <description><![CDATA[<p>1. LTin and LTi cells express two adhesion</p><p>receptors, &alpha;4&beta;1 and &alpha;4&beta;7, that bind to</p><p>VCAM-1,&nbsp;MAdCAM, and ICAM-1 expressed</p><p>by LTo cell&nbsp;(Yoshida 2001)</p><p>2. Inhibiting VCAM-1 expression has a</p><p>profound&nbsp;effect on aggregation, suggesting</p><p>it is dominant&nbsp;(Finke 2002)</p>]]></description>
+  </node>
+  <node id="14" nodetype="goal" x="839" y="-461" collapsed="false" undeveloped="true">
+    <name>CLAIM 1.1.2.2.2:</name>
+    <description><![CDATA[<p>Level of expression of</p><p>adhesion&nbsp;replicates that</p><p>in the biological system</p>]]></description>
+  </node>
+  <node id="15" nodetype="context" x="544" y="-411" collapsed="false" undeveloped="false">
+    <name>Context:</name>
+    <description><![CDATA[<p>No quantitative data</p><p>exists&nbsp;at the current time</p>]]></description>
+  </node>
+  <node id="16" nodetype="strategy" x="73" y="147" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.2.3:</name>
+    <description><![CDATA[<p>Argue that the platform</p><p>representation&nbsp;of the gut</p><p>environment is appropriate</p>]]></description>
+  </node>
+  <node id="17" nodetype="goal" x="404" y="397" collapsed="false" undeveloped="true">
+    <name>CLAIM 1.1.2.3.1:</name>
+    <description><![CDATA[<p>The physical shape of the gut</p><p>has no impact on PP formation</p>]]></description>
+  </node>
+  <node id="18" nodetype="assumption" x="-484" y="325" collapsed="false" undeveloped="false">
+    <name>Assumptions:</name>
+    <description><![CDATA[<p>1. All cell interactions occur on the&nbsp;gut</p><p>epithelium</p><p>2. All LTin/LTi cell movement occurs&nbsp;on</p><p>the&nbsp;epithelium</p><p>3. Although aggregations can from as&nbsp;3D</p><p>structures, having a 2D aggregation&nbsp;is a</p><p>suitable&nbsp;abstraction to judge what&nbsp;causes&nbsp;</p><p>cells to&nbsp;aggregate &nbsp;&ndash; it is the causes&nbsp;that&nbsp;</p><p>are of interest, not matching the size</p>]]></description>
+  </node>
+  <node id="19" nodetype="goal" x="48" y="398" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.2.3.2:</name>
+    <description><![CDATA[<p>A 2D representation is suitable to</p><p>capture the emergent behaviours</p>]]></description>
+  </node>
+  <node id="20" nodetype="solution" x="126" y="600" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Domain</p><p>Expert insight</p>]]></description>
+  </node>
+  <node id="21" nodetype="strategy" x="832" y="151" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.2.4:</name>
+    <description><![CDATA[<p>Argue that the abstractions made</p><p>concerning cell interaction do not</p><p>affect emergent behaviours</p>]]></description>
+  </node>
+  <node id="22" nodetype="goal" x="844" y="384" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.2.4.1:</name>
+    <description><![CDATA[<p>It is not necessary to explictly</p><p>capture lymphotoxin signalling</p>]]></description>
+  </node>
+  <node id="23" nodetype="solution" x="779" y="607" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Domain</p><p>Expert insight</p>]]></description>
+  </node>
+  <node id="24" nodetype="solution" x="1017" y="609" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Cell behaviour</p><p>calibration results</p><p>(Figure 2.10)</p>]]></description>
+  </node>
+  <node id="25" nodetype="assumption" x="1298" y="311" collapsed="false" undeveloped="false">
+    <name>Assumptions:</name>
+    <description><![CDATA[<p>1. RET signalling is thought to upregulate&nbsp;LT&alpha;&beta;</p><p>signalling on LTin cells &ndash; this occurs&nbsp;through</p><p>stable contact between an LTin and&nbsp;LTi, so is</p><p>implicitly included</p><p>2. No definitive understanding of how LT&alpha;&beta;</p><p>upregulated on LTi cells (Section 1.3.2) &ndash;&nbsp;just</p><p>that no PP form if not upregulated &nbsp;(Adachi</p><p>1997) &ndash; assumption made the&nbsp;mechanism to</p><p>upregulate LT&alpha;&beta; is implicitly included</p>]]></description>
+  </node>
+  <connection parentid="0" childid="1"/>
+  <connection parentid="1" childid="2"/>
+  <connection parentid="1" childid="3"/>
+  <connection parentid="3" childid="4"/>
+  <connection parentid="2" childid="5"/>
+  <connection parentid="2" childid="6"/>
+  <connection parentid="2" childid="7"/>
+  <connection parentid="2" childid="8"/>
+  <connection parentid="0" childid="9"/>
+  <connection parentid="9" childid="10"/>
+  <connection parentid="10" childid="11"/>
+  <connection parentid="10" childid="12"/>
+  <connection parentid="10" childid="13"/>
+  <connection parentid="9" childid="14"/>
+  <connection parentid="14" childid="15"/>
+  <connection parentid="0" childid="16"/>
+  <connection parentid="16" childid="17"/>
+  <connection parentid="16" childid="19"/>
+  <connection parentid="19" childid="18"/>
+  <connection parentid="19" childid="20"/>
+  <connection parentid="0" childid="21"/>
+  <connection parentid="21" childid="22"/>
+  <connection parentid="22" childid="23"/>
+  <connection parentid="22" childid="24"/>
+  <connection parentid="22" childid="25"/>
+</argument>

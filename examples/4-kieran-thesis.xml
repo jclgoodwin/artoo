@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <node id="0" nodetype="goal" x="166" y="115" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.4:</name>
+    <description><![CDATA[<p>Simulation captures cell&nbsp;aggregation</p><p>emergent behaviour at 72 hours</p>]]></description>
+  </node>
+  <node id="1" nodetype="strategy" x="44" y="-118" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.4.1:</name>
+    <description><![CDATA[<p>Argue that a representative</p><p>number&nbsp;of PP are formed at</p><p>the end of 72&nbsp;hour period</p>]]></description>
+  </node>
+  <node id="2" nodetype="goal" x="145" y="-315" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.4.1.1:</name>
+    <description><![CDATA[<p>Simulation has been&nbsp;calibrated</p><p>to&nbsp;produce a&nbsp;representative&nbsp;</p><p>number of PP</p>]]></description>
+  </node>
+  <node id="3" nodetype="solution" x="139" y="-533" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Snapshots verified</p><p>by Domain Experts</p>]]></description>
+  </node>
+  <node id="4" nodetype="solution" x="354" y="-533" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Calibration results</p><p>Figure 2.15</p>]]></description>
+  </node>
+  <node id="5" nodetype="assumption" x="-279" y="-326" collapsed="false" undeveloped="false">
+    <name>Assumptions:</name>
+    <description><![CDATA[<p>1. Calibration is based on setting</p><p>the number of stromal cells (LTo)</p><p>that can express RET ligand (and</p><p>thus mediate PP development)</p>]]></description>
+  </node>
+  <node id="6" nodetype="strategy" x="479" y="-108" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.4.2</name>
+    <description><![CDATA[<p>Argue over the simulation's ability</p><p>to reproduce previously published</p><p>experimental results</p>]]></description>
+  </node>
+  <node id="7" nodetype="goal" x="470" y="-331" collapsed="false" undeveloped="true">
+    <name>CLAIM 1.1.4.2.1:</name>
+    <description><![CDATA[<p>Simulation reproduces experimental</p><p>results showing patch formation</p><p>under different conditions in</p><p>Veiga-Fernandes (2007), Luther</p><p>(2003),&nbsp;Eberl (2004), Meier (2007)</p>]]></description>
+  </node>
+  <node id="8" nodetype="context" x="844" y="-299" collapsed="false" undeveloped="false">
+    <name>Note:</name>
+    <description><![CDATA[<p>This goal will be developed</p><p>in Chapter 4 of this thesis</p>]]></description>
+  </node>
+  <node id="9" nodetype="strategy" x="175" y="302" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.4.3:</name>
+    <description><![CDATA[<p>Argue that the simulation&nbsp;captures</p><p>spatial characteristics of PP</p>]]></description>
+  </node>
+  <node id="10" nodetype="goal" x="206" y="470" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.4.3.1:</name>
+    <description><![CDATA[<p>Comparison can be drawn</p><p>between PP generated</p><p><em>in silico</em> and those <em>in vivo</em></p>]]></description>
+  </node>
+  <node id="11" nodetype="solution" x="236" y="705" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Snapshots verified</p><p>by Domain Experts</p>]]></description>
+  </node>
+  <node id="12" nodetype="justification" x="606" y="423" collapsed="false" undeveloped="false">
+    <name>Justifications:</name>
+    <description><![CDATA[<p>1. There is no quantitative data available&nbsp;on&nbsp;which</p><p>simulation PP size can be compared&nbsp;to&nbsp;<em>in vivo</em></p><p>patch sizes. Thus patches are identified&nbsp;by eye by</p><p>collaborating experimental immunologists</p><p>2. An analysis of the patches identified by eye has</p><p>been used as a basis for what a patch is, and from</p><p>this a lower 2D area limit estimated. This shows</p><p>the prcess of determining what a patch is to be</p><p>automated (as in section 2.2.5)</p>]]></description>
+  </node>
+  <connection parentid="0" childid="1"/>
+  <connection parentid="1" childid="2"/>
+  <connection parentid="2" childid="3"/>
+  <connection parentid="2" childid="4"/>
+  <connection parentid="2" childid="5"/>
+  <connection parentid="0" childid="6"/>
+  <connection parentid="6" childid="7"/>
+  <connection parentid="7" childid="8"/>
+  <connection parentid="0" childid="9"/>
+  <connection parentid="9" childid="10"/>
+  <connection parentid="10" childid="11"/>
+  <connection parentid="10" childid="12"/>
+</argument>

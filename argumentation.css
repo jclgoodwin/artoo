@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;   
+    font-family: sans-serif;
+    font-size: large;    
+}
+
+.spacer {
+    font-size: 10px;
+    line-height: 10px;
+}
+
+._no_select {
+    /* Disable user highlighting text */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+}
+
+#bannerDiv {
+    padding-bottom: 4px;    
+    margin-bottom: 8px;    
+    display: inline-block;
+}
+
+#uniLogo {
+    width: 250;
+    float: right;
+    /*padding: 2px;
+    border: 1px solid black;*/
+    margin-right: 10px;
+	margin-top: 20px;
+}
+
+#imsLogo {
+    height: 65;
+    float: right;
+    /*padding: 2px;
+    border: 1px solid black;*/
+}
+
+#pBanner {
+    font-size: 30px;
+    float: left;    
+    padding-top: 2px;
+    /*border-bottom: 4px double;
+    border-color: #6EACEB;*/
+}
+
+#sBanner {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    color: #6EACEB;
+}
+
+.dialogH {
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 4px;
+}
+
+h3 {
+    margin-bottom: 5px;
+    cursor: default;
+    font-size: 20px;
+}
+
+/* Mozilla (Gecko) text positioning is a bit different to chrome
+   so add a few pixels of margin to get consistent results in the svg text*/
+@-moz-document url-prefix() { 
+  h3 {
+     margin-top: 2px;
+  }
+}
+
+a:link{
+  color: blue;
+}
+
+a:visited{
+  color: blue;
+}
+
+body {
+    margin: 8px;
+    /*background-color: #ddf;*/
+}
+
+li > a {     
+    display: block;
+}
+
+p {
+    cursor: default;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+li:hover {
+    background-color: #6EACEB;
+    /*bottom-border-color: black;*/
+    
+    cursor: pointer;
+}
+
+.menuLi {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+li {
+    margin-right: 5px;
+    display: inline-block;
+    position: relative;
+    background-color: #D5E6F5;
+    border: 4px solid;    
+    border-color: #6EACEB;  
+    /*border-bottom: none;*/
+    border-radius: 10px;
+    /*border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;*/
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 32px;
+    line-height: 31px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;  
+
+     /* Disable user highlighting text */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+}
+
+svg {	
+    border: 4px solid;
+    border-radius: 5px;
+    /*border-top-left-radius: 0px;*/
+    border-color: #6EACEB;   
+    /*border-color: #D5E6F5;   */
+}
+
+rect, polygon, ellipse, circle {
+	fill-opacity: 1.0; 
+	fill: white; 
+	stroke: black; 
+	stroke-width: 2px;    
+}
+
+._graphLibFilled {
+    fill: black
+}
+
+rect.coverTxt {
+    fill-opacity: 0.0;     
+    stroke: none;     
+}
+
+path.arrow {
+    fill: none; 
+    stroke: black; 
+    stroke-width: 2;
+}
+
+path.hiddenArrow {
+    fill: black; 
+    stroke: black; 
+    stroke-width: 2;
+}
+
+#canvas {
+    stroke-width: 0px;
+    opacity: 0.0;
+}
+
+.textMain {
+	font-size: 12pt; 
+}
+
+.textTitle {
+	font-size: 12pt; 
+	font-weight: bold;
+}
+
+.dialogDiv {
+    position: absolute;
+    border-top: 6px groove;
+    border-left: 6px groove;
+    border-bottom: 6px ridge;
+    border-right: 6px ridge;
+    border-radius: 5px;
+    border-color: #6EACEB; 
+    display: none;
+    
+    background-color: #eee;
+    padding: 12px;
+    /*padding-top: 6px;*/
+    z-index: 2;
+}
+
+.dialogDiv ul {  
+    padding-top: 6px;
+}
+
+/*#testInfo {
+    border: 2px dotted black;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-right: 0px;
+    float: right;
+}
+
+#testInfo:hover {
+    background-color: #fff;
+    cursor: default;
+}*/
+
+#menuDiv {        
+    margin-bottom: -4px;
+    margin-left: 4px;
+}
+
+#menuDiv ul li:hover ul {
+    display: inline-block;
+}
+
+#menuDiv ul li ul {   
+    padding: 0px;
+    display: none;
+    position: absolute;
+    top: 34px;
+    left: -4px;
+    padding-top: 2px;
+
+/*    border: 4px solid;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-color: #D5E6F5; */
+}
+
+/*.ulMenu {
+    border: 0px solid black;
+    border-radius: 5px;
+    border-top-left-radius: 0px;   
+}*/
+
+#menuDiv ul li ul li:hover { 
+    background-color: #6EACEB;
+}   
+
+#menuDiv ul li ul li {    
+    display: block;
+    border: none;
+    background-color: #D5E6F5;
+    border-radius: 0px;
+    white-space: nowrap;
+    margin-right: 0px;
+}
+
+#menuDiv ul li ul li:first-child {
+    border-top-right-radius: 5px;   
+}
+
+#menuDiv ul li ul li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#nodeMenuDiv {
+    position: absolute;
+    display: none;    
+    z-index: 1;
+    border: 4px solid;
+    border-radius: 5px;
+    border-color: #6EACEB;      
+}
+
+#nodeMenuDiv li {
+    display: block;
+    border: none;
+    margin-right: 0px;
+    border-radius: 0px;
+}
+
+#dimScreenDiv {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    background-color: black;
+    opacity: 0.3;
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argument>
+  <node id="0" nodetype="goal" x="451" y="-246" collapsed="false" undeveloped="false">
+    <name>CLAIM 1:</name>
+    <description><![CDATA[<p>Model is an adequate</p><p>representation of the biology</p>]]></description>
+  </node>
+  <node id="1" nodetype="context" x="791" y="-246" collapsed="false" undeveloped="false">
+    <name>Purpose:</name>
+    <description><![CDATA[<p>&mdash; Recreate emergent observed <em>in vivo</em> and <em>ex vivo</em></p><p>&mdash; Creation of tool for exploration of hypotheses</p>]]></description>
+  </node>
+  <node id="2" nodetype="context" x="-4" y="-256" collapsed="false" undeveloped="false">
+    <name>Definition: 'Adequate'</name>
+    <description><![CDATA[<p>Experimental work using model</p><p>produces statistically comparable results</p><p>to those seen biologically</p>]]></description>
+  </node>
+  <node id="3" nodetype="strategy" x="393" y="-71" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1:</name>
+    <description><![CDATA[<p>Argue over scientific content, the adequacy</p><p>of the abstraction, and experimental results</p>]]></description>
+  </node>
+  <node id="4" nodetype="goal" x="-99" y="116" collapsed="true" undeveloped="false">
+    <name>CLAIM 1.1.1:</name>
+    <description><![CDATA[<p>Underlying biological data</p><p>is adequate/accurate</p>]]></description>
+  </node>
+  <node id="5" nodetype="goal" x="203" y="146" collapsed="true" undeveloped="false">
+    <name>CLAIM 1.1.2:</name>
+    <description><![CDATA[<p>The abstraction (platform model)</p><p>is adequate representation</p>]]></description>
+  </node>
+  <node id="6" nodetype="goal" x="547" y="153" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.3:</name>
+    <description><![CDATA[<p>Simulated cell behaviour between</p><p>12 and 13 hours matches that</p><p>observed in <em>ex vivo</em> culture</p>]]></description>
+  </node>
+  <node id="7" nodetype="goal" x="891" y="136" collapsed="true" undeveloped="false">
+    <name>CLAIM 1.1.4:</name>
+    <description><![CDATA[<p>Simulation captures cell aggregation</p><p>emergent behaviour at 72 hours</p>]]></description>
+  </node>
+  <node id="8" nodetype="strategy" x="504" y="355" collapsed="false" undeveloped="false">
+    <name>STRATEGY 1.1.3.1:</name>
+    <description><![CDATA[<p>Argue that simulated cell behaviour is</p><p>statistically similar to that <em>ex vivo</em> at 12 hours</p>]]></description>
+  </node>
+  <node id="9" nodetype="goal" x="364" y="546" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.3.1.1:</name>
+    <description><![CDATA[<p>Simulated cells &lt;50&mu;m from a forming</p><p>patch behave as observed <em>ex vivo</em></p>]]></description>
+  </node>
+  <node id="10" nodetype="goal" x="795" y="548" collapsed="false" undeveloped="false">
+    <name>CLAIM 1.1.3.1.2:</name>
+    <description><![CDATA[<p>Simulated cells &gt;50&mu;m from a forming</p><p>patch behave as observed <em>ex vivo</em></p>]]></description>
+  </node>
+  <node id="11" nodetype="justification" x="-42" y="535" collapsed="false" undeveloped="false">
+    <name>Justifications:</name>
+    <description><![CDATA[<p>1. Mann-Whitney U-Test used</p><p>as no&nbsp;guarantee that the data</p><p>is normally distributed</p>]]></description>
+  </node>
+  <node id="12" nodetype="solution" x="436" y="761" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Mann-Whitney</p><p>test&nbsp;reveals no</p><p>statistical difference</p><p>(Figure 2.15)</p>]]></description>
+  </node>
+  <node id="13" nodetype="solution" x="867" y="762" collapsed="false" undeveloped="false">
+    <name></name>
+    <description><![CDATA[<p>Mann-Whitney</p><p>test reveals no</p><p>statistical difference</p><p>(Figure 2.15)</p>]]></description>
+  </node>
+  <node id="14" nodetype="strategy" x="32" y="318" collapsed="false" undeveloped="false">
+    <name>D1</name>
+    <description><![CDATA[<p>Dummy</p>]]></description>
+  </node>
+  <node id="15" nodetype="strategy" x="332" y="354" collapsed="false" undeveloped="false">
+    <name>D2</name>
+    <description><![CDATA[<p>Dummy</p>]]></description>
+  </node>
+  <node id="16" nodetype="strategy" x="1042" y="297" collapsed="false" undeveloped="false">
+    <name>D3</name>
+    <description><![CDATA[<p>Dummy</p>]]></description>
+  </node>
+  <connection parentid="0" childid="1"/>
+  <connection parentid="0" childid="2"/>
+  <connection parentid="0" childid="3"/>
+  <connection parentid="3" childid="4"/>
+  <connection parentid="3" childid="5"/>
+  <connection parentid="3" childid="6"/>
+  <connection parentid="3" childid="7"/>
+  <connection parentid="6" childid="8"/>
+  <connection parentid="8" childid="9"/>
+  <connection parentid="8" childid="10"/>
+  <connection parentid="9" childid="11"/>
+  <connection parentid="9" childid="12"/>
+  <connection parentid="10" childid="13"/>
+  <connection parentid="4" childid="14"/>
+  <connection parentid="5" childid="15"/>
+  <connection parentid="7" childid="16"/>
+</argument>
