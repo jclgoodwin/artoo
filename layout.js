@@ -85,7 +85,7 @@ $(document).ready(function () {
         '3-kieran-thesis.xml',
         '4-kieran-thesis.xml',
         'example2.xml'
-        ]
+        ];
 
     for (var i = 0; i < examples.length; i += 1) {
         $("#applicationMenu").append("<li class=menuLi id=loadExample" + i + ">Load <code>" + examples[i] + "</code></li>");
