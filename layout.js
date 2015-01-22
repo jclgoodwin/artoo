@@ -1,31 +1,27 @@
 var layout = [];
 
-layout.doLayout = function(svgGraph) {
+layout.doLayout = function (graph) {
+    'use strict';
 
-    // 
+    var springyGraph = new Springy.Graph(),
+        springyNodes = {},
+        i;
 
-    var springyGraph = new Springy.Graph();
-    var springyNodes = [];
-
-    for (var node in svgGraph.nodes) {
-        if (svgGraph.nodes.hasOwnProperty(node)) {
-            // console.log(node);
-            springyNodes[node.id] = springyGraph.newNode({svgId: node});
-        }
-    }
-    for (var connection in svgGraph.nodes) {
-        if (svgGraph.nodes.hasOwnProperty(node)) {
-            springyGraph.newEdge(springyNodes[connection.fromid], springyNodes[connection.fromid]);
-        }
+    // make nodes
+    for (i = 0; i < graph.ids.length; i += 1) {
+        springyNodes[graph.ids[i]] = springyGraph.newNode({svgId: graph.ids[i]});
     }
 
-    // console.log(springyGraph);
+    // make edges
+    for (i = 0; i < graph.connections.length; i += 1) {
+        springyGraph.newEdge(springyNodes[graph.connections[i].fromId], springyNodes[graph.connections[i].toId]);
+    }
 
     var springyLayout = new Springy.Layout.ForceDirected(
         springyGraph,
-        400.0, // Spring stiffness
-        200.0, // Node repulsion
-        0.5 // Damping
+        200.0, // Spring stiffness
+        1600.0, // Node repulsion
+        .5 // Damping
     );
 
     var springyRenderer = new Springy.Renderer(
@@ -34,78 +30,55 @@ layout.doLayout = function(svgGraph) {
             // code to clear screen
         },
         function drawEdge(edge, p1, p2) {
-            // draw an edge
-        },
-        function drawNode(node, p) {
-            // console.log(node);
-            graph.graph.nodes[node.data.svgId].setAttribute("transform", "translate(" + p.x * 50 + ", " + p.y * 50 + ")");
-
-            for (var c = 0; c < svgGraph.connections.length; c++) {
-                drawLine(svgGraph, svgGraph.connections[c]);
+            for (var c = 0; c < graph.graph.connections.length; c++) {
+                drawLine(graph.graph, graph.graph.connections[c]);
             }
-        
             // Re-draw diamonds
-            for (var n in svgGraph.nodes) {
-                if (svgGraph.nodes.hasOwnProperty(n)) {
-                    svgGraph.placeDiamond(n);
+            for (var n in graph.graph.nodes) {
+                if (graph.graph.nodes.hasOwnProperty(n)) {
+                    graph.graph.placeDiamond(n);
                 }
             }
-
             graph.graph.centreGraph();
+        },
+        function drawNode(node, p) {
+            if (graph.graph.nodes[node.data.svgId] === undefined) {
+                return false;
+            }
+            graph.graph.nodes[node.data.svgId].setAttribute("transform", "translate(" + parseInt(p.x * 70) + ", " + parseInt(p.y * 45) + ")");
         }
     );
 
     springyRenderer.start();
-
-    // var bounds = svgGraph.canvas.getBBox();
-    // console.log(bounds);
-
-    // var x = 0,
-    //     y = 0;
-
-    // // Move the nodes
-    // for (var node in svgGraph.nodes) {
-    //     if (svgGraph.nodes.hasOwnProperty(node)) {
-    //         svgGraph.nodes[node].setAttribute("transform", "translate(" + x + ", " + y + ")");
-    //         y += svgGraph.nodes[node].getBBox().height + 20;
-    //         x += svgGraph.nodes[node].getBBox().width + 20;
-    //         // window.alert(svgGraph.nodes[node].width);
-    //     }
-    // }
 }
 
 $(document).ready(function () {
 
-    // disable annoying (to me) "unsaved changes will be lost" dialog
-    // $(window).off("onbeforeunload");
+    // useful "load example" menu
 
-    var examples = [
-        '1-kieran-thesis.xml',
-        '2-kieran-thesis.xml',
-        '3-kieran-thesis.xml',
-        '4-kieran-thesis.xml',
-        'example2.xml'
-        ];
-
-    for (var i = 0; i < examples.length; i += 1) {
-        $("#applicationMenu").append("<li class=menuLi id=loadExample" + i + ">" + examples[i] + "</li>");
-        $("#loadExample" + i).click(function() {
-            graph.clear();
-    
-            $.ajax({
-                type: "GET",
-                url: "examples/" + $(this).text(),
-                dataType: "xml",
-                success: function(xml) {
-                    processXMLFile(xml);
-                }
-            });
-        });
+    $("#applicationMenu").append("<li class=menuLi id=loadExampleMenuMain>Load example...</li>");
+    $("#loadExampleMenuMain").append("<ul class=ulMenu id=loadExampleMenu></ul>");
+    for (var i = 1; i <= 4; i += 1) {
+        $("#loadExampleMenu").append("<li>" + i + "-kieran-thesis.xml</li>");
     }
+    $("#loadExampleMenu li").click(function() {
+        graph.clear();
 
-    $("#applicationMenu").append("<li class=menuLi>Lay out</li>");
+        $.ajax({
+            type: "GET",
+            url: "examples/" + $(this).text(),
+            dataType: "xml",
+            success: function(xml) {
+                processXMLFile(xml);
+            }
+        });
+    });
 
-    $("#applicationMenu").click(function () {
-        layout.doLayout(graph.graph);
+    // automatic layout button
+
+    $("#applicationMenu").append("<li class=menuLi id=layOut>Lay out</li>");
+
+    $("#layOut").click(function () {
+        layout.doLayout(graph);
     });
 });
