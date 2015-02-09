@@ -1,5 +1,52 @@
 var layout = [];
 
+layout.doArborLayout = function (graph) {
+    'use strict';
+
+    var system = arbor.ParticleSystem(),
+        i;
+
+    system.renderer = {
+        init: function(system) {
+            return null;
+        },
+        redraw: function() {
+            system.eachNode(function(node, p) {
+                // console.log(node);
+                // console.log(pt);
+                if (graph.graph.nodes[node.name] === undefined) {
+                    return false;
+                }
+                graph.graph.nodes[node.name].setAttribute("transform", "translate(" + parseInt(p.x * 70) + ", " + parseInt(p.y * 45) + ")");
+
+                for (var c = 0; c < graph.graph.connections.length; c++) {
+                    drawLine(graph.graph, graph.graph.connections[c]);
+                }
+
+                // Re-draw diamonds
+                for (var n in graph.graph.nodes) {
+                    if (graph.graph.nodes.hasOwnProperty(n)) {
+                        graph.graph.placeDiamond(n);
+                    }
+                }
+
+                graph.graph.centreGraph();
+            });
+        },   
+    };
+
+    // make nodes
+    for (i = 0; i < graph.ids.length; i += 1) {
+        system.addNode(graph.ids[i]);
+    }
+
+    // make edges
+    for (i = 0; i < graph.connections.length; i += 1) {
+        system.addEdge(graph.connections[i].fromId, graph.connections[i].toId);
+    }
+
+}
+
 layout.doLayout = function (graph) {
     'use strict';
 
@@ -76,9 +123,13 @@ $(document).ready(function () {
 
     // automatic layout button
 
-    $("#applicationMenu").append("<li class=menuLi id=layOut>Lay out</li>");
+    $("#applicationMenu").append("<li class=menuLi id=layOut>Lay out (springy.js)</li>");
+    $("#applicationMenu").append("<li class=menuLi id=ArborLayOut>Lay out (arbor.js)</li>");
 
     $("#layOut").click(function () {
         layout.doLayout(graph);
+    });
+    $("#ArborLayOut").click(function () {
+        layout.doArborLayout(graph);
     });
 });
