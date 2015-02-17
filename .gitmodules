@@ -1,3 +1,6 @@
 [submodule "arbor"]
 	path = arbor
 	url = https://github.com/samizdatco/arbor.git
+[submodule "dagre"]
+	path = dagre
+	url = https://github.com/cpettitt/dagre.git
