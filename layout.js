@@ -1,12 +1,16 @@
+// Author: Joshua Goodwin
+
 var layout = {};
 
 layout.layoutStrategies = {};
 
+// A utility function, a counterpart to getRealCoords() in svggraphlib.js
 layout.setCoords = function (element, x, y) {
     var bbox = element.getBBox();
     element.setAttribute("transform", "translate(" + parseInt(bbox.x + x) + ", " + parseInt(bbox.y + y) + ")");
 }
 
+// The "naive" application of the Dagre graph layout implemenation
 layout.layoutStrategies.dagre = function (graph) {
     "use strict";
 
@@ -56,6 +60,7 @@ layout.layoutStrategies.dagre = function (graph) {
     graph.graph.centreGraph();
 };
 
+// A more novel, GSN-specific 
 layout.layoutStrategies.dagreNovel = function (graph) {
     "use strict";
 
@@ -85,8 +90,6 @@ layout.layoutStrategies.dagreNovel = function (graph) {
         if (graph.graph.nodes[i]) {
             bbox = graph.graph.nodes[i].getBBox();
             g.setNode(graph.ids[i], { width: bbox.width, height: bbox.height });
-        } else {
-            console.log(not);
         }
     }
 
@@ -122,6 +125,7 @@ layout.layoutStrategies.dagreNovel = function (graph) {
     graph.graph.centreGraph();
 }
 
+// Integrating the Arbor force directed algorithm implementation
 layout.layoutStrategies.arbor = function (graph) {
     'use strict';
 
@@ -134,8 +138,6 @@ layout.layoutStrategies.arbor = function (graph) {
         },
         redraw: function() {
             system.eachNode(function(node, p) {
-                // console.log(node);
-                // console.log(pt);
                 if (graph.graph.nodes[node.name] === undefined) {
                     return false;
                 }
@@ -169,6 +171,7 @@ layout.layoutStrategies.arbor = function (graph) {
 
 }
 
+// Integrating the Springy.js force directed algorithm implementation
 layout.layoutStrategies.springy = function (graph) {
     'use strict';
 
@@ -219,7 +222,6 @@ layout.layoutStrategies.springy = function (graph) {
     );
 
     springyRenderer.start();
-    springyRenderer.stop();
 }
 
 $(document).ready(function () {
@@ -232,7 +234,6 @@ $(document).ready(function () {
     }
     $("#loadExampleMenu li").click(function() {
         graph.clear();
-
         $.ajax({
             type: "GET",
             url: "examples/" + $(this).text(),
@@ -244,13 +245,12 @@ $(document).ready(function () {
     });
 
     // automatic layout menu
-
     $("#applicationMenu").append("<li class=menuLi id=layOutMenuMain>Lay out...</li>");
     $("#layOutMenuMain").append("<ul class=ulMenu id=layOutMenu></ul>");
     $("#layOutMenu").append("<li class=menuLi>springy</li>");
+    $("#layOutMenu").append("<li class=menuLi>arbor</li>");
     $("#layOutMenu").append("<li class=menuLi>dagre</li>");
     $("#layOutMenu").append("<li class=menuLi>dagreNovel</li>");
-
     $("#layOutMenu li").click(function () {
         layout.layoutStrategies[this.textContent].call(this, graph);
     });
