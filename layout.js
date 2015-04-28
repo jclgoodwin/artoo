@@ -4,10 +4,14 @@ var layout = {};
 
 layout.layoutStrategies = {};
 
-// A utility function, a counterpart to getRealCoords() in svggraphlib.js
+// A utility function, a counterpart to getRealCoords() in svggraphlib.js,
+// but which sets the coordinates of the centre of a node
 layout.setCoords = function (element, x, y) {
     var bbox = element.getBBox();
-    element.setAttribute("transform", "translate(" + parseInt(bbox.x + x) + ", " + parseInt(bbox.y + y) + ")");
+    element.setAttribute(
+        "transform",
+        "translate(" + parseInt(bbox.x + x + bbox.width/2) + ", " + parseInt(bbox.y + y + bbox.height/2) + ")"
+        );
 }
 
 // The "naive" application of the Dagre graph layout implemenation
